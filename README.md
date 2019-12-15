@@ -1,5 +1,8 @@
 # remark-a11y-emoji
 
+[![Badge for Tests](https://github.com/florianeckerstorfer/remark-a11y-emoji/workflows/Test/badge.svg)](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions?query=workflow%3A%22Test)
+
+
 Plugin for [Remark](https://remark.js.org) to make emoji accessible. This plugin wraps emoji in a `<span>` and sets the name of the emoji as `aria-label`.
 
 Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 Vienna, Europe.
