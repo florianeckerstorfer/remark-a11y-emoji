@@ -1,0 +1,5 @@
+/__tests__
+/coverage
+/.npmignore
+/.prettierrc
+*.log

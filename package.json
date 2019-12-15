@@ -1,0 +1,35 @@
+{
+  "name": "@fec/remark-a11y-emoji",
+  "version": "1.0.0",
+  "description": "Remark plugin to add a label to emoji and make them accessible.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["remark", "a11y", "emoji"],
+  "author": "Florian Eckerstofer <florian@eckerstorfer.net>",
+  "license": "MIT",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "remark": "^11.0.2",
+    "remark-html": "^10.0.0"
+  },
+  "dependencies": {
+    "emoji-regex": "^8.0.0",
+    "gemoji": "^4.2.1",
+    "unist-util-visit": "^2.0.1"
+  }
+}
