@@ -14,7 +14,6 @@ afterEach(() => {
 });
 
 describe('remark-a11y-emoji', () => {
-  const a11yEmoji = plugin();
   const processor = remark()
     .use(html)
     .use(plugin);
