@@ -6,7 +6,11 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["remark", "a11y", "emoji"],
+  "keywords": [
+    "remark",
+    "a11y",
+    "emoji"
+  ],
   "author": "Florian Eckerstofer <florian@eckerstorfer.net>",
   "license": "MIT",
   "jest": {
