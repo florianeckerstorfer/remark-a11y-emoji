@@ -28,6 +28,16 @@ describe('remark-a11y-emoji', () => {
     });
   });
 
+  it('should return HTML for "👩🏾‍💻"', done => {
+    const input = '👩🏾‍💻';
+    const expected = '<span role="img" aria-label="woman technologist (skin tone 5)">👩🏾‍💻</span>';
+
+    processor.process(input, (_, file) => {
+      expect(String(file)).toContain(expected);
+      done();
+    });
+  });
+
   it('should return HTML for "foo 🎸 bar 🎧 qoo"', done => {
     const input = 'foo 🎸 bar 🎧 qoo';
     const expected =
