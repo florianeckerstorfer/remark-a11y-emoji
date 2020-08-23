@@ -28,7 +28,17 @@ describe('remark-a11y-emoji', () => {
     });
   });
 
-  it('should return HTML for "👩🏾‍💻"', done => {
+  it('should return HTML for emojis with skin tones', done => {
+    const input = '✌🏾';
+    const expected = '<span role="img" aria-label="victory hand (skin tone 5)">✌🏾</span>';
+
+    processor.process(input, (_, file) => {
+      expect(String(file)).toContain(expected);
+      done();
+    });
+  });
+
+  it('should return HTML for emojis without variant selector', done => {
     const input = '👩🏾‍💻';
     const expected = '<span role="img" aria-label="woman technologist (skin tone 5)">👩🏾‍💻</span>';
 

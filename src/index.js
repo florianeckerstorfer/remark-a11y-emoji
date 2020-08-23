@@ -8,10 +8,15 @@ function a11yEmoji() {
   function getEmojiDescription(emoji) {
     const { skintone, genericEmoji } = stripSkintone(emoji);
 
-    const info = gemoji.unicode[genericEmoji];
+    let info = gemoji.unicode[genericEmoji];
 
     if (!info) {
-      return '';
+      const appleEmoji = genericEmoji + '\uFE0F';
+      info = gemoji.unicode[appleEmoji];
+
+      if (!info) {
+        return ''
+      }
     }
 
     const skintoneDescription = skintoneMap[skintone] || '';
