@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "emoji-regex": "^9.0.0",
-    "gemoji": "^4.2.1",
+    "gemoji": "^5.0.1",
     "unist-util-visit": "^2.0.1"
   },
   "engines": {
