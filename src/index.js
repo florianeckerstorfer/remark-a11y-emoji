@@ -1,18 +1,21 @@
 import emojiRegex from 'emoji-regex';
 import gemoji from 'gemoji';
 import visit from 'unist-util-visit';
-
 import { stripSkintone, skintoneMap } from './skintone';
+
+function emojiToName(emoji) {
+  return gemoji.find(item => item.emoji === emoji);
+}
 
 function a11yEmoji() {
   function getEmojiDescription(emoji) {
     const { skintone, genericEmoji } = stripSkintone(emoji);
 
-    let info = gemoji.unicode[genericEmoji];
+    let info = emojiToName(genericEmoji);
 
     if (!info) {
       const appleEmoji = genericEmoji + '\uFE0F';
-      info = gemoji.unicode[appleEmoji];
+      info = emojiToName(appleEmoji);
 
       if (!info) {
         return ''
