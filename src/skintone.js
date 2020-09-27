@@ -11,7 +11,7 @@ function stripSkintone(emoji) {
   const genericEmoji = emoji.replace(skintoneRegex, '');
 
   let skintone = emoji.match(skintoneRegex);
-  skintone = skintone === null ? undefined : skintone[0]
+  skintone = skintone && skintone[0] ? skintone[0] : undefined;
 
   return { skintone, genericEmoji };
 }

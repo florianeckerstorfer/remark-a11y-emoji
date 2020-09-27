@@ -1,19 +1,17 @@
 import plugin from '../src';
-const remark = require('remark');
-const html = require('remark-html');
-const gemoji = require('gemoji');
+import remark from 'remark';
+import html from 'remark-html';
+import gemoji from 'gemoji';
 
-let unicodeBackup;
-
-beforeEach(() => {
-  unicodeBackup = gemoji.unicode;
-});
-
-afterEach(() => {
-  gemoji.unicode = unicodeBackup;
-});
+jest.mock('gemoji', ()=>([
+  { emoji: '🎸', description: 'guitar' },
+  { emoji: '✌️', description: 'victory hand' },
+  { emoji: '👩‍💻', description: 'woman technologist' },
+  { emoji: '🎧', description: 'headphone' },
+]), { virtual: true })
 
 describe('remark-a11y-emoji', () => {
+
   const processor = remark()
     .use(html)
     .use(plugin);
@@ -63,15 +61,13 @@ describe('remark-a11y-emoji', () => {
     const input = '🚨';
     const expected = '<span role="img" aria-label="">🚨</span>';
 
-    gemoji.unicode['🚨'] = undefined;
-
     processor.process(input, (_, file) => {
       expect(String(file)).toContain(expected);
       done();
     });
   });
 
-  it('should return do nothing to other nodes', done => {
+ it('should return do nothing to other nodes', done => {
     const input = 'foo **bar**';
     const expected = 'foo <strong>bar</strong>';
 
