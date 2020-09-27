@@ -18,7 +18,7 @@ function a11yEmoji() {
       info = emojiToName(appleEmoji);
 
       if (!info) {
-        return ''
+        return '';
       }
     }
 
