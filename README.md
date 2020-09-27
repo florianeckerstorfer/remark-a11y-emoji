@@ -17,7 +17,7 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 
 ## Installation
 
-You need to install `@fec/remark-a11y-emoji` with NPM or Yarn. Since this is a plugin for Remark, I assume you Remark already installed and configured.
+You need to install `@fec/remark-a11y-emoji` with NPM or Yarn. Since this is a plugin for Remark, I assume you already have Remark installed and configured.
 
 ```bash
 npm install -D @fec/remark-a11y-emoji
