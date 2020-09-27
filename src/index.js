@@ -1,8 +1,8 @@
-const emojiRegex = require('emoji-regex');
-const gemoji = require('gemoji');
-const visit = require('unist-util-visit');
+import emojiRegex from 'emoji-regex';
+import gemoji from 'gemoji';
+import visit from 'unist-util-visit';
 
-const { stripSkintone, skintoneMap } = require('./skintone');
+import { stripSkintone, skintoneMap } from './skintone';
 
 function a11yEmoji() {
   function getEmojiDescription(emoji) {
@@ -40,4 +40,4 @@ function a11yEmoji() {
   return transform;
 }
 
-module.exports = a11yEmoji;
+export default a11yEmoji;
