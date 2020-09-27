@@ -1,4 +1,4 @@
-const plugin = require('../src/index');
+import plugin from '../src';
 const remark = require('remark');
 const html = require('remark-html');
 const gemoji = require('gemoji');

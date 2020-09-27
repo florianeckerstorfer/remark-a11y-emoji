@@ -16,7 +16,7 @@ function stripSkintone(emoji) {
   return { skintone, genericEmoji };
 }
 
-module.exports = {
+export {
   skintoneMap,
   stripSkintone,
 }
