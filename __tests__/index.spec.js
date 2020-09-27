@@ -1,4 +1,4 @@
-const plugin = require('../src/index');
+const plugin = require('../dist/remark-a11y-emoji.cjs');
 const remark = require('remark');
 const html = require('remark-html');
 const gemoji = require('gemoji');

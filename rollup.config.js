@@ -20,9 +20,10 @@ export default [
   {
     input: 'src/index.js',
     external: [ 'emoji-regex', 'gemoji', 'unist-util-visit' ],
-    output: {
-      file: pkg.main,
-      format: 'cjs',
-    },
+    output: [
+      { file: pkg.main, format: 'cjs', exports: 'default' },
+      { file: pkg.module, format: 'esm' },
+    ],
+    plugins: [ json() ],
   },
 ];
