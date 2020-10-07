@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "emoji-regex": "^9.0.0",
-    "gemoji": "^5.0.1",
+    "gemoji": "^6.0.0",
     "unist-util-visit": "^2.0.3"
   },
   "engines": {
