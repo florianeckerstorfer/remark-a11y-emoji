@@ -34,20 +34,20 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "babel-jest": "^26.3.0",
-    "jest": "^26.4.2",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "rollup": "^2.28.2"
+    "rollup": "^2.34.0"
   },
   "dependencies": {
-    "emoji-regex": "^9.0.0",
-    "gemoji": "^6.0.0",
+    "emoji-regex": "^9.2.0",
+    "gemoji": "^6.1.0",
     "unist-util-visit": "^2.0.3"
   },
   "engines": {
