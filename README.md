@@ -26,13 +26,18 @@ yarn add --dev @fec/remark-a11y-emoji
 
 ## Configuration
 
-You can use `@fec/remark-a11y-emoji` like any other Remark plugin:
+You can use `@fec/remark-a11y-emoji` like any other Remark plugin. The plugin produces an AST ([hast](https://github.com/syntax-tree/hast), [rehype](https://github.com/rehypejs/rehype)), which you can serialize to HTML with [rehype-stringify](https://github.com/rehypejs/rehype/tree/main/packages/rehype-stringify):
 
 ```js
-const remark = require('remark');
-const a11yEmoji = require('@fec/remark-a11y-emoji');
+import remark from 'remark';
+import a11yEmoji from '@fec/remark-a11y-emoji';
+import rehypeStringify from 'rehype-stringify';
+import remarkRehype from 'remark-rehype';
 
-const processor = remark().use(a11yEmoji);
+const processor = remark()
+    .use(a11yEmoji)
+    .use(remarkRehype)
+    .use(rehypeStringify);
 ```
 
 # Contributing

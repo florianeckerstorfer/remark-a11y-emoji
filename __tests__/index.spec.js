@@ -1,79 +1,73 @@
-import plugin from '../src';
+import rehypeStringify from 'rehype-stringify';
 import remark from 'remark';
-import html from 'remark-html';
-import gemoji from 'gemoji';
+import remarkRehype from 'remark-rehype';
+import plugin from '../src';
 
-jest.mock('gemoji', ()=>([
-  { emoji: '🎸', description: 'guitar' },
-  { emoji: '✌️', description: 'victory hand' },
-  { emoji: '👩‍💻', description: 'woman technologist' },
-  { emoji: '🎧', description: 'headphone' },
-]), { virtual: true })
+jest.mock(
+  'gemoji',
+  () => [
+    { emoji: '🎸', description: 'guitar' },
+    { emoji: '✌️', description: 'victory hand' },
+    { emoji: '👩‍💻', description: 'woman technologist' },
+    { emoji: '🎧', description: 'headphone' },
+  ],
+  { virtual: true }
+);
 
 describe('remark-a11y-emoji', () => {
-
   const processor = remark()
-    .use(html)
-    .use(plugin);
+    .use(plugin)
+    .use(remarkRehype)
+    .use(rehypeStringify);
 
-  it('should return HTML for "🎸"', done => {
+  it('should return HTML for "🎸"', async () => {
     const input = '🎸';
     const expected = '<span role="img" aria-label="guitar">🎸</span>';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 
-  it('should return HTML for emojis with skin tones', done => {
+  it('should return HTML for emojis with skin tones', async () => {
     const input = '✌🏾';
-    const expected = '<span role="img" aria-label="victory hand (skin tone 5)">✌🏾</span>';
+    const expected =
+      '<span role="img" aria-label="victory hand (skin tone 5)">✌🏾</span>';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 
-  it('should return HTML for emojis without variant selector', done => {
+  it('should return HTML for emojis without variant selector', async () => {
     const input = '👩🏾‍💻';
-    const expected = '<span role="img" aria-label="woman technologist (skin tone 5)">👩🏾‍💻</span>';
+    const expected =
+      '<span role="img" aria-label="woman technologist (skin tone 5)">👩🏾‍💻</span>';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 
-  it('should return HTML for "foo 🎸 bar 🎧 qoo"', done => {
+  it('should return HTML for "foo 🎸 bar 🎧 qoo"', async () => {
     const input = 'foo 🎸 bar 🎧 qoo';
     const expected =
       'foo <span role="img" aria-label="guitar">🎸</span> bar <span role="img" aria-label="headphone">🎧</span> qoo';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 
-  it('should use empty string as label if emoji does not exist', done => {
+  it('should use empty string as label if emoji does not exist', async () => {
     const input = '🚨';
     const expected = '<span role="img" aria-label="">🚨</span>';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 
- it('should return do nothing to other nodes', done => {
+  it('should return do nothing to other nodes', async () => {
     const input = 'foo **bar**';
     const expected = 'foo <strong>bar</strong>';
 
-    processor.process(input, (_, file) => {
-      expect(String(file)).toContain(expected);
-      done();
-    });
+    const { contents } = await processor.process(input);
+    expect(contents).toContain(expected);
   });
 });
