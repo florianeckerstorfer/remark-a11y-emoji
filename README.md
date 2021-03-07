@@ -65,7 +65,7 @@ module.exports = {
 
 See [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
 
-# Contributing
+## Contributing
 
 To contribute to `@fec/remark-a11y-emoji`, follow these steps:
 
