@@ -3,3 +3,8 @@ coverage
 package-lock.json
 dist
 .DS_Store
+gatsby-integration-test
+scripts/htpasswd
+scripts/storage
+gatsby/index.js
+.npmrc

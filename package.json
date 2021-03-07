@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
+    "test:integration": "./__tests__/gatsby-integration.spec.sh",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -24,6 +25,7 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
+    "testRegex": "/__tests__/.*\\.[jt]sx?$",
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -44,17 +46,20 @@
     "rehype-stringify": "^8.0.0",
     "remark": "^13.0.0",
     "remark-rehype": "^8.0.0",
-    "rollup": "^2.34.0"
+    "rollup": "^2.34.0",
+    "verdaccio": "^4.11.2"
   },
   "dependencies": {
     "emoji-regex": "^9.2.0",
     "gemoji": "^6.1.0",
-    "mdast-util-find-and-replace": "^1.0.0"
+    "mdast-util-find-and-replace": "^1.0.0",
+    "unist-util-visit": "^2.0.3"
   },
   "engines": {
     "node": ">=10.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "gatsby"
   ]
 }
