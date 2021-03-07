@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
+    "test:integration": "./__tests__/gatsby-integration.spec.sh",
     "prepare": "npm run build"
   },
   "keywords": [

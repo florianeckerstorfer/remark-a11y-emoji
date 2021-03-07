@@ -1,9 +1,9 @@
-name: Unit tests
+name: Integration tests
 
 on: [push]
 
 jobs:
-  test_unit:
+  test_integration:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,7 +18,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
-      - name: Run tests
-        run: npm test -- --coverage
+      - name: Build project
+        run: npm run build
+      - name: Run integration tests
+        run: npm run test:integration
         env:
           CI: true
