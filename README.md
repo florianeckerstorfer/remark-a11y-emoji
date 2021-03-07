@@ -11,8 +11,11 @@ Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 
 
 1. [Installation](#installation)
 2. [Configuration](#configuration)
-3. [Contributing](#contributing)
-4. [License](#license)
+3. [Configuration with Gatsby](#configuration-with-gatsby)
+4. [Code of Conduct](#code-of-conduct)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Change-log](#change-log)
 
 ## Installation
 
@@ -41,7 +44,7 @@ const processor = remark()
 
 ## Configuration with Gatsby
 
-```
+```javascript
 module.exports = {
   // ...
   plugins: [
@@ -57,6 +60,10 @@ module.exports = {
   ],
 };
 ```
+
+## Code of Conduct
+
+See [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
 
 # Contributing
 
@@ -75,4 +82,8 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## License
 
-This project is licenses under the [MIT License](LICENSE).
+See [LICENSE](LICENSE.md)
+
+## Change log
+
+See [CHANGELOG](CHANGELOG.md)
