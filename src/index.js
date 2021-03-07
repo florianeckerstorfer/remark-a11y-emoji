@@ -1,31 +1,6 @@
 import emojiRegex from 'emoji-regex';
-import gemoji from 'gemoji';
 import findAndReplace from 'mdast-util-find-and-replace';
-import { skintoneMap, stripSkintone } from './skintone';
-
-function emojiToName(emoji) {
-  return gemoji.find((item) => item.emoji === emoji);
-}
-
-function getEmojiDescription(emoji) {
-  const { skintone, genericEmoji } = stripSkintone(emoji);
-
-  let info = emojiToName(genericEmoji);
-
-  if (!info) {
-    const appleEmoji = genericEmoji + '\uFE0F';
-    info = emojiToName(appleEmoji);
-
-    if (!info) {
-      return '';
-    }
-  }
-
-  const skintoneDescription = skintoneMap[skintone] || '';
-  return skintoneDescription
-    ? `${info.description} (${skintoneDescription})`
-    : info.description;
-}
+import { getEmojiDescription } from './helper';
 
 function a11yEmoji() {
   function replace(match) {
@@ -42,6 +17,7 @@ function a11yEmoji() {
 
   function transform(markdownAST) {
     findAndReplace(markdownAST, emojiRegex(), replace);
+    return markdownAST;
   }
 
   return transform;

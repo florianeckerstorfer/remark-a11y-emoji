@@ -9,21 +9,22 @@ export default [
     output: {
       name: 'remarkA11yEmoji',
       file: pkg.browser,
-      format: 'umd'
+      format: 'umd',
     },
-    plugins: [
-      json(),
-      resolve(),
-      commonjs(),
-    ]
+    plugins: [json(), resolve(), commonjs()],
   },
   {
     input: 'src/index.js',
-    external: [ 'emoji-regex', 'gemoji', 'unist-util-visit' ],
+    external: ['emoji-regex', 'gemoji', 'mdast-util-find-and-replace'],
     output: [
       { file: pkg.main, format: 'cjs', exports: 'default' },
       { file: pkg.module, format: 'esm' },
     ],
-    plugins: [ json() ],
+    plugins: [json()],
+  },
+  {
+    input: 'src/gatsby.js',
+    external: ['emoji-regex', 'gemoji', 'unist-util-visit'],
+    output: { file: 'gatsby/index.js', format: 'cjs', exports: 'default' },
   },
 ];
