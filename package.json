@@ -14,7 +14,9 @@
   "keywords": [
     "remark",
     "a11y",
-    "emoji"
+    "emoji",
+    "gatsby",
+    "gatsby-plugin"
   ],
   "author": "Florian Eckerstofer <florian@eckerstorfer.net>",
   "license": "MIT",

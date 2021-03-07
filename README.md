@@ -3,7 +3,7 @@
 [![Unit tests](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/test.yml/badge.svg)](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/test.yml)
 [![Integration tests](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/integration.yml/badge.svg)](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/integration.yml)
 
-Plugin for [Remark](https://remark.js.org) to make emoji accessible. This plugin wraps emoji in a `<span>` and sets the name of the emoji as `aria-label`.
+Plugin for [Remark](https://remark.js.org) to make emoji accessible. This plugin wraps emoji in a `<span>` and sets the name of the emoji as `aria-label`. `remark-a11y-emoji` also works with [Gatsby](https://www.gatsbyjs.com).
 
 Made by 👨‍💻[Florian Eckerstorfer](https://florian.ec) in beautiful 🎡 Vienna, Europe.
 

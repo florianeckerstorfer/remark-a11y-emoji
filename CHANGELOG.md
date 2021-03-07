@@ -1,5 +1,9 @@
 # `@fec/remark-a11y-emoji` Change Log
 
+## Version 3.1.0 (7 March 2021)
+
+- [#20](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/20) Add Gatsby plugin
+
 ## Version 3.0.0 (1 Dec 2020)
 
 - [#19](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/19) Output hast tree instead of HTML
