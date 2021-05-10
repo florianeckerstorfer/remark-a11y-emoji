@@ -55,7 +55,7 @@
     "emoji-regex": "^9.2.0",
     "gemoji": "^6.1.0",
     "mdast-util-find-and-replace": "^1.0.0",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^3.0.1"
   },
   "engines": {
     "node": ">=10.0"
