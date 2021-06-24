@@ -1,6 +1,6 @@
 import plugin from '../src/gatsby';
 import Remark from 'remark';
-import visit from 'unist-util-visit';
+import { visit } from 'unist-util-visit';
 
 describe('remark-a11y-emoji/gatsby', () => {
   let remark;

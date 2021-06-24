@@ -1,5 +1,5 @@
 import emojiRegex from 'emoji-regex';
-import visit from 'unist-util-visit';
+import { visit } from 'unist-util-visit';
 import { getEmojiDescription } from './helper';
 
 function a11yEmoji({ markdownAST }) {
