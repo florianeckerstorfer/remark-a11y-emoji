@@ -54,7 +54,7 @@
   "dependencies": {
     "emoji-regex": "^10.0.0",
     "gemoji": "^6.1.0",
-    "mdast-util-find-and-replace": "^1.0.0",
+    "mdast-util-find-and-replace": "^2.2.0",
     "unist-util-visit": "^2.0.3"
   },
   "engines": {
