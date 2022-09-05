@@ -44,7 +44,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "babel-jest": "^27.0.1",
-    "jest": "^27.0.1",
+    "jest": "^29.0.2",
     "rehype-stringify": "^8.0.0",
     "remark": "^13.0.0",
     "remark-rehype": "^8.0.0",
