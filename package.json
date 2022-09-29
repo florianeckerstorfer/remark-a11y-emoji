@@ -43,7 +43,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
-    "babel-jest": "^27.0.1",
+    "babel-jest": "^29.1.0",
     "jest": "^27.0.1",
     "rehype-stringify": "^8.0.0",
     "remark": "^13.0.0",
