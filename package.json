@@ -8,7 +8,6 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "test:integration": "./__tests__/gatsby-integration.spec.sh",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -48,8 +47,7 @@
     "rehype-stringify": "^8.0.0",
     "remark": "^14.0.2",
     "remark-rehype": "^8.0.0",
-    "rollup": "^2.34.0",
-    "verdaccio": "^5.0.1"
+    "rollup": "^2.34.0"
   },
   "dependencies": {
     "emoji-regex": "^10.0.0",
@@ -58,7 +56,7 @@
     "unist-util-visit": "^2.0.3"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=16.0"
   },
   "files": [
     "dist",
