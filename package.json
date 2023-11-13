@@ -23,6 +23,10 @@
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
+    "transformIgnorePatterns": [
+      "node_modules/?!(unist-util-visit|mdast-util-find-and-replace)",
+      "\\.pnp\\.[^\\/]+$"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
@@ -52,8 +56,8 @@
   "dependencies": {
     "emoji-regex": "^10.0.0",
     "gemoji": "^6.1.0",
-    "mdast-util-find-and-replace": "^1.0.0",
-    "unist-util-visit": "^2.0.3"
+    "mdast-util-find-and-replace": "^2.0.1",
+    "unist-util-visit": "^3.1.0"
   },
   "engines": {
     "node": ">=16.0"
