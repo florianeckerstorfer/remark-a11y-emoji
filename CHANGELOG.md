@@ -1,5 +1,11 @@
 # `@fec/remark-a11y-emoji` Change Log
 
+## Version 4.0.0 (13 November 2023)
+
+- Update dependencies and add support for Node 18.x and 20.x
+- Drop support for older versions of Node
+- Gatsby plugin is no longer actively developed and we removed the integration tests
+
 ## Version 3.1.0 (7 March 2021)
 
 - [#20](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/20) Add Gatsby plugin

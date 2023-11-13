@@ -1,7 +1,6 @@
 # remark-a11y-emoji
 
 [![Unit tests](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/test.yml/badge.svg)](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/test.yml)
-[![Integration tests](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/integration.yml/badge.svg)](https://github.com/florianeckerstorfer/remark-a11y-emoji/actions/workflows/integration.yml)
 
 Plugin for [Remark](https://remark.js.org) to make emoji accessible. This plugin wraps emoji in a `<span>` and sets the name of the emoji as `aria-label`. For example, the input `inline 🎉 emoji` becomes:
 
