@@ -58,7 +58,7 @@
     "unist-util-visit": "^2.0.3"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=16.0"
   },
   "files": [
     "dist",
