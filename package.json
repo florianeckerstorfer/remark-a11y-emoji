@@ -8,7 +8,6 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "test:integration": "./__tests__/gatsby-integration.spec.sh",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -44,7 +43,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
-    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "babel-jest": "^27.0.1",
@@ -52,17 +51,16 @@
     "rehype-stringify": "^8.0.0",
     "remark": "^13.0.0",
     "remark-rehype": "^8.0.0",
-    "rollup": "^2.34.0",
-    "verdaccio": "^5.0.1"
+    "rollup": "^2.34.0"
   },
   "dependencies": {
-    "emoji-regex": "^9.2.0",
+    "emoji-regex": "^10.0.0",
     "gemoji": "^6.1.0",
     "mdast-util-find-and-replace": "^2.0.1",
     "unist-util-visit": "^3.1.0"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=16.0"
   },
   "files": [
     "dist",
