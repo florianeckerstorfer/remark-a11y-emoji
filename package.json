@@ -1,6 +1,6 @@
 {
   "name": "@fec/remark-a11y-emoji",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Remark plugin to add a label to emoji and make them accessible.",
   "main": "dist/remark-a11y-emoji.cjs.js",
   "module": "dist/remark-a11y-emoji.esm.js",
