@@ -1,5 +1,5 @@
 import emojiRegex from 'emoji-regex';
-import { findAndReplace } from 'mdast-util-find-and-replace';
+import findAndReplace from 'mdast-util-find-and-replace';
 import { getEmojiDescription } from './helper';
 
 function a11yEmoji() {
