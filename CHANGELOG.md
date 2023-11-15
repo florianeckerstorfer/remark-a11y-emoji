@@ -1,5 +1,9 @@
 # `@fec/remark-a11y-emoji` Change Log
 
+### Version 4.0.1 (15 November 2023)
+
+- [#130](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/130) Fix mdast-util-find-and-replace dependency
+
 ## Version 4.0.0 (13 November 2023)
 
 - Update dependencies and add support for Node 18.x and 20.x
