@@ -1,5 +1,9 @@
 # `@fec/remark-a11y-emoji` Change Log
 
+### Version 4.0.2 (15 November 2023)
+
+- [#131](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/131) Fix imports unist-util-visit
+
 ### Version 4.0.1 (15 November 2023)
 
 - [#130](https://github.com/florianeckerstorfer/remark-a11y-emoji/pull/130) Fix mdast-util-find-and-replace dependency
