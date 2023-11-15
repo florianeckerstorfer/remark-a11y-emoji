@@ -50,7 +50,7 @@
     "jest": "^29.5.0",
     "rehype-stringify": "^9.0.3",
     "remark": "^13.0.0",
-    "remark-rehype": "^10.1.0",
+    "remark-rehype": "^11.0.0",
     "rollup": "^2.34.0"
   },
   "dependencies": {
